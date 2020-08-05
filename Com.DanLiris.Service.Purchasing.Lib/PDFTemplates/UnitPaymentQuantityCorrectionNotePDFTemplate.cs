@@ -58,7 +58,7 @@ namespace Com.DanLiris.Service.Purchasing.Lib.PDFTemplates
                 PdfPCell cellHeaderContentRight = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_RIGHT };
                 PdfPCell cellHeaderContentCenter = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER };
 
-                cellHeaderContentLeft.Phrase = new Phrase("PT DAN LIRIS", bold_font);
+                cellHeaderContentLeft.Phrase = new Phrase("PT. MULTIYASA ABADI SENTOSA", bold_font);
                 tableHeader.AddCell(cellHeaderContentLeft);
 
                 cellHeaderContentCenter.Phrase = new Phrase("NOTA KOREKSI", bold_font);
@@ -73,8 +73,8 @@ namespace Com.DanLiris.Service.Purchasing.Lib.PDFTemplates
                 cellHeaderContentCenter.Phrase = new Phrase("");
                 tableHeader.AddCell(cellHeaderContentCenter);
 
-                cellHeaderContentLeft.Phrase = new Phrase("FM-PB-00-06-015/R2", terbilang_bold_font);
-                tableHeader.AddCell(cellHeaderContentLeft);
+                //cellHeaderContentLeft.Phrase = new Phrase("FM-PB-00-06-015/R2", terbilang_bold_font);
+                //tableHeader.AddCell(cellHeaderContentLeft);
 
                 cellHeaderContentLeft.Phrase = new Phrase("");
                 tableHeader.AddCell(cellHeaderContentLeft);
@@ -465,7 +465,7 @@ namespace Com.DanLiris.Service.Purchasing.Lib.PDFTemplates
                 Paragraph pembeliBkp = new Paragraph("Pembeli PKB", smaller_bold_font) { Alignment = Element.ALIGN_LEFT };
                 document.Add(pembeliBkp);
 
-                Paragraph companyName = new Paragraph("Nama     :  PT DAN LIRIS", smaller_font) { Alignment = Element.ALIGN_LEFT };
+                Paragraph companyName = new Paragraph("Nama     :  PT. MULTIYASA ABADI SENTOSA", smaller_font) { Alignment = Element.ALIGN_LEFT };
                 document.Add(companyName);
 
                 Paragraph companyAddress = new Paragraph("Alamat     :  JL. Merapi No.23 Banaran, Grogol, Kab. Sukoharjo Jawa Tengah 57552", smaller_font) { Alignment = Element.ALIGN_LEFT };
