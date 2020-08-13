@@ -12,9 +12,10 @@ using System;
 namespace Com.DanLiris.Service.Purchasing.Lib.Migrations
 {
     [DbContext(typeof(PurchasingDbContext))]
-    partial class PurchasingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200701063002_AddPoCashTypeInPoExternal")]
+    partial class AddPoCashTypeInPoExternal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -950,8 +951,6 @@ namespace Com.DanLiris.Service.Purchasing.Lib.Migrations
                     b.Property<bool>("IsCanceled");
 
                     b.Property<bool>("IsClosed");
-
-                    b.Property<bool>("IsCreateOnVBRequest");
 
                     b.Property<bool>("IsDeleted");
 
@@ -3547,10 +3546,6 @@ namespace Com.DanLiris.Service.Purchasing.Lib.Migrations
 
                     b.Property<DateTime>("LastModifiedUtc");
 
-                    b.Property<string>("PaymentMethod");
-
-                    b.Property<string>("PaymentType");
-
                     b.Property<string>("UId")
                         .HasMaxLength(255);
 
@@ -5298,8 +5293,6 @@ namespace Com.DanLiris.Service.Purchasing.Lib.Migrations
                     b.Property<bool>("IsDeleted");
 
                     b.Property<bool>("IsPaid");
-
-                    b.Property<bool>("IsPosted");
 
                     b.Property<string>("LastModifiedAgent")
                         .IsRequired()

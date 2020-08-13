@@ -47,7 +47,7 @@ namespace Com.DanLiris.Service.Purchasing.Lib.PDFTemplates
             tableHeader.SetWidths(new float[] { 1f, 1f, 1f });
 
             PdfPCell cellHeaderContentLeft = new PdfPCell() { Border = Rectangle.NO_BORDER };
-            cellHeaderContentLeft.AddElement(new Phrase("PT DAN LIRIS", header_font));
+            cellHeaderContentLeft.AddElement(new Phrase("PT. MULTIYASA ABADI SENTOSA", header_font));
             cellHeaderContentLeft.AddElement(new Phrase("BANARAN, GROGOL, SUKOHARJO", normal_font));
             tableHeader.AddCell(cellHeaderContentLeft);
 
@@ -57,7 +57,7 @@ namespace Com.DanLiris.Service.Purchasing.Lib.PDFTemplates
             tableHeader.AddCell(cellHeaderContentCenter);
 
             PdfPCell cellHeaderContentRight = new PdfPCell() { Border = Rectangle.NO_BORDER };
-            cellHeaderContentRight.AddElement(new Phrase("FM-PB-00-06-014/R1", normal_font));
+            //cellHeaderContentRight.AddElement(new Phrase("FM-PB-00-06-014/R1", normal_font));
             cellHeaderContentRight.AddElement(new Phrase($"SUKOHARJO, {model.Date.ToOffset(new TimeSpan(clientTimeZoneOffset, 0, 0)).ToString("dd MMMM yyyy", new CultureInfo("id-ID"))}", normal_font));
             cellHeaderContentRight.AddElement(new Phrase($"( {model.SupplierCode} ) {model.SupplierName}", normal_font));
             cellHeaderContentRight.AddElement(new Phrase(model.SupplierAddress, normal_font));
